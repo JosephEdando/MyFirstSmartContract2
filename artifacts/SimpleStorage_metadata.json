@@ -6,6 +6,25 @@
 	"output": {
 		"abi": [
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "newNumber",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "updatedBy",
+						"type": "address"
+					}
+				],
+				"name": "NumberUpdated",
+				"type": "event"
+			},
+			{
 				"inputs": [],
 				"name": "activateContract",
 				"outputs": [],
@@ -46,6 +65,25 @@
 			{
 				"inputs": [],
 				"name": "callInternalFunction",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_inputString",
+						"type": "string"
+					}
+				],
+				"name": "concatenateString",
 				"outputs": [
 					{
 						"internalType": "string",
@@ -185,6 +223,19 @@
 						"type": "uint256"
 					}
 				],
+				"name": "store",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_favoriteNumber",
+						"type": "uint256"
+					}
+				],
 				"name": "storeNumber",
 				"outputs": [],
 				"stateMutability": "nonpayable",
@@ -245,11 +296,11 @@
 	},
 	"sources": {
 		"SimpleStorage.sol": {
-			"keccak256": "0xe894526e3f16c74b7116b01560b68bf9c103fcb0c3f2ddfff12d37ed716c4edb",
+			"keccak256": "0xaba4a426cdafb5e9d3b23435867125aefbbd2e2ad13412ab8544f72e1942b6f2",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://3a16dc5ff9cd3596596e6e69d7a1f9693cf3e2f70751805931c18c07e20f8c97",
-				"dweb:/ipfs/QmUQnqio1br5oAoRwMJNxB4UVGx43RpsJ3G316EcMJNuGB"
+				"bzz-raw://3aa0a864ab06abbe1d8533d4c1a189b8775692edc8c1db96a2f432ee5b7ee675",
+				"dweb:/ipfs/QmYgzUxWSR7wPtwc3oKYduCdYC3jHgxNkeissjbacBbRzh"
 			]
 		}
 	},

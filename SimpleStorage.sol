@@ -93,4 +93,18 @@ contract SimpleStorage {
     function isActive() public view returns (bool) {
         return state == ContractState.Active;
     }
+
+    event NumberUpdated(uint256 newNumber, address updatedBy);
+
+    function store(uint256 _favoriteNumber) public {
+        favoriteNumber = _favoriteNumber;
+
+        // Emit the event when the number is updated
+        emit NumberUpdated(_favoriteNumber, msg.sender);
+    }
+    function concatenateString(string calldata _inputString) public pure returns (string memory) {
+        // Memory variable to store the concatenated result
+        string memory newString = string(abi.encodePacked(_inputString, " is awesome!"));
+        return newString;
+    }
 }
